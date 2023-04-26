@@ -8,21 +8,24 @@ int rand = new Random().Next(80, 120);
 
 Console.WriteLine("Рамдомное число:  " + rand);
 
-FistNumber(rand);
-Console.WriteLine(" " + rand);
-//Console.WriteLine(" " + rand);
+ThreeNumber(rand);
 
-int FistNumber(int x)
+int ThreeNumber(int x)
 {
-    int a = x % 10;
-    if (a>0)
+    int a = (x % 10);
+    if (rand < 100)
      {
-        rand = a;
+        Console.Write("Третьей цифры нет"); 
+      
      }   
-    else
+    else 
     {
-       Console.Write("Третьей цифры нет"); 
+      if (rand > 100)
+      {
+       rand = a;
+      Console.WriteLine(+ rand);
+      }
+
     }
     return x;
 }
-//Console.WriteLine(" " + rand);
